@@ -1,6 +1,6 @@
 #Baseball League Statistics Tracker and Scheduler
 
-Group Members:
+##Group Members:
 - Jermaine Ganado
 - Mitchell Mohorovich  
 - Frank Vumbaca     
