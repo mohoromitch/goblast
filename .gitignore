@@ -3,6 +3,12 @@
 *.a
 *.so
 
+# macOS system files
+*.DS_Store
+
+# Vim files
+*.swp
+
 # Folders
 _obj
 _test
@@ -22,3 +28,4 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
