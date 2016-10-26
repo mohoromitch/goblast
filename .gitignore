@@ -29,3 +29,4 @@ _testmain.go
 *.test
 *.prof
 
+a5/sqlplus_l.sh
