@@ -30,3 +30,5 @@ _testmain.go
 *.prof
 
 a5/sqlplus_l.sh
+
+.idea
