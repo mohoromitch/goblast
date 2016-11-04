@@ -89,6 +89,7 @@ while true; do
    echo "4. Drop Tables"
    tput cup 11 0
    echo "5. Drop Views"
+   echo "6. Advanced Queries"
    echo "q. Quit"
 
    # Set bold mode 
@@ -108,6 +109,8 @@ while true; do
       4) drop_tables
          ;;
       5) drop_views
+         ;;
+      6) advanced_queries
          ;;
       q) break
          ;;
