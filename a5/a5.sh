@@ -30,6 +30,13 @@ function create_views {
    pkc
 }
 
+function advanced_queries {
+   echo "running advnaced queries..."
+   ./a_queries.sql
+   done_message
+   pkc
+}
+
 function drop_views {
    echo "dropping views..."
    ./d_views.sh
