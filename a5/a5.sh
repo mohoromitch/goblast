@@ -32,7 +32,7 @@ function create_views {
 
 function advanced_queries {
    echo "running advnaced queries..."
-   ./a_queries.sql
+   ./a_queries.sh
    done_message
    pkc
 }
