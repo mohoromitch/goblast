@@ -37,6 +37,12 @@ function advanced_queries {
    pkc
 }
 
+function insert_queries {
+   echo "opening queries..."
+   ./i_queries.sh
+   done_message
+   pkc
+}
 function drop_views {
    echo "dropping views..."
    ./d_views.sh
@@ -90,6 +96,7 @@ while true; do
    tput cup 11 0
    echo "5. Drop Views"
    echo "6. Advanced Queries"
+   echo "7. Insert Queries"
    echo "q. Quit"
 
    # Set bold mode 
@@ -111,6 +118,8 @@ while true; do
       5) drop_views
          ;;
       6) advanced_queries
+         ;;
+      7) insert_queries
          ;;
       q) break
          ;;
