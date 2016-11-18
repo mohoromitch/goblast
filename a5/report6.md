@@ -264,3 +264,44 @@ ORDER BY SEASON_ID, TEAMS.ID;
 <tr><td>1</td><td>The Plastics</td><td>2</td><td>1</td></tr>
 <tr><td>2</td><td>The Mathletes</td><td>2</td><td>3</td></tr></table>
 </body>
+
+## Functional Dependencies
+### TEAMS
+```
+ID -> Name
+```
+### PLAYERS
+```
+ID -> First Name
+ID -> Last Name
+```
+### SEASONS
+```
+ID -> Year
+ID -> Type
+```
+### PLAYS_FOR
+```
+PLAYER_ID, SEASON_ID -> TEAM_ID
+```
+### GAMES
+```
+ID -> HOME_TEAM_ID
+ID -> VISITOR_TEAM_ID
+ID -> SEASON_ID
+ID -> HOME_SCORE
+ID -> VISITOR_SCORE
+ID -> GAME_LOCATION
+ID -> GAME_DATE
+```
+### STATISTICS
+```
+PLAYER_ID, GAME_ID -> AB
+PLAYER_ID, GAME_ID -> H
+PLAYER_ID, GAME_ID -> R
+PLAYER_ID, GAME_ID -> RBI
+PLAYER_ID, GAME_ID -> 1B
+PLAYER_ID, GAME_ID -> 2B
+PLAYER_ID, GAME_ID -> 3B
+PLAYER_ID, GAME_ID -> HR
+```
