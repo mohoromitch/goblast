@@ -60,10 +60,11 @@ FROM PLAYERS p
                      PLAYER_ID,
                      (SUM("1B") + SUM("2B") + SUM("3B") + SUM(HR)) / SUM(AB) AS BA
                    FROM GAMES
-                     LEFT JOIN STATISTICS s2 ON GAMES.ID = s2.GAME_ID
+                     LEFT JOIN PERFORMED_IN pi ON pi.GAME_ID=GAMES.ID
+                     LEFT JOIN STATISTICS s2 ON s2.ID = pi.STATISTIC_ID
                    WHERE
                      GAME_DATE > TO_DATE(:sd) AND GAME_DATE < TO_DATE(:ed)
-                   GROUP BY s2.PLAYER_ID
+                   GROUP BY pi.PLAYER_ID
                  ) i
              ) s ON p.ID = s.PLAYER_ID ORDER BY BA DESC;
 
