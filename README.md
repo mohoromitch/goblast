@@ -11,4 +11,4 @@ Many neighbourhoods, workplaces and schools run recreational baseball leagues. W
 
 ##Entity Relationship Diagram
 
-![Image of Yaktocat](/diagrams/er-v1.png)
+![Image of Yaktocat](/a2/er-v1.png)
