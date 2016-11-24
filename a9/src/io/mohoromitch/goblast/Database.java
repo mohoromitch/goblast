@@ -1,19 +1,20 @@
 package io.mohoromitch.goblast;
 import java.sql.*;
-import java.text.CollationElementIterator;
-import java.util.Map;
-import java.util.concurrent.Callable;
+import java.util.Properties;
 
 /**
  * Created by mitchellmohorovich on 2016-11-24.
  */
 public class Database {
+
+	public static int POOL_SIZE = 10;
 	public static final String HOST = "localhost",
 		USERNAME = "mmohorov",
 		PASSWORD = "pJazBRLEpHW{q2Cp2N",
 		NAME = "orcl";
 	public static final int PORT = 1521;
 
+	final Thread MAIN_THREAD = Thread.currentThread();
 	private Connection connection;
 
 
@@ -25,10 +26,13 @@ public class Database {
 			throw e;
 		}
 		try {
+			Properties prop = new Properties();
+			prop.put("user", USERNAME);
+			prop.put("password", PASSWORD);
+			prop.put("allowMultiQueries", true);
 			connection = DriverManager.getConnection(
-				String.format("jdbc:oracle:thin:@%s:%d:%s", HOST, PORT, NAME), //"jdbc:oracle:thin:@localhost:1521:mkyong",
-				USERNAME,
-				PASSWORD);
+				String.format("jdbc:oracle:thin:@%s:%d:%s", HOST, PORT, NAME),
+				prop);
 		} catch (SQLException e) {
 			System.out.println("Database connection failed.");
 			throw e;
@@ -50,8 +54,24 @@ public class Database {
 		return rs;
 	}
 
+	public void executeBatch(String query) throws SQLException {
+		for (String q : query.split(";")) {
+			q.replace("\n", " ");
+			q.replace(",", ", ");
+			String trimmed = q.trim();
+			if (!trimmed.isEmpty()) {
+				execute(trimmed);
+			}
+		}
+	}
+
 	public PreparedStatement getPreparedStatementFrom (String query) throws SQLException {
 		return connection.prepareStatement(query);
 	}
+
+	public Statement createStatement() throws SQLException {
+		return connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+	}
+
 
 }

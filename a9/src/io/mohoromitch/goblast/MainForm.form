@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="ea811" class="javax.swing.JButton" binding="createTablesButton" default-binding="true">
+      <component id="fea93" class="io.mohoromitch.goblast.Button" binding="createTablesButton" default-binding="true">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -17,7 +17,7 @@
           <text value="Create Tables"/>
         </properties>
       </component>
-      <component id="30f22" class="javax.swing.JButton" binding="populateTablesButton" default-binding="true">
+      <component id="6ab98" class="io.mohoromitch.goblast.Button" binding="populateTablesButton" default-binding="true">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -25,7 +25,7 @@
           <text value="Populate Tables"/>
         </properties>
       </component>
-      <component id="3d86c" class="javax.swing.JButton" binding="createViewsButton" default-binding="true">
+      <component id="dd1b1" class="io.mohoromitch.goblast.Button" binding="createViewsButton" default-binding="true">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -50,7 +50,7 @@
           </component>
         </children>
       </scrollpane>
-      <component id="3041e" class="javax.swing.JButton" binding="dropViewsButton" default-binding="true">
+      <component id="d6f77" class="io.mohoromitch.goblast.Button" binding="dropViewsButton" default-binding="true">
         <constraints>
           <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -58,7 +58,7 @@
           <text value="Drop Views"/>
         </properties>
       </component>
-      <component id="720a9" class="javax.swing.JButton" binding="dropTablesButton" default-binding="true">
+      <component id="24517" class="io.mohoromitch.goblast.Button" binding="dropTablesButton" default-binding="true">
         <constraints>
           <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -83,7 +83,7 @@
           </component>
         </children>
       </scrollpane>
-      <component id="1daec" class="javax.swing.JButton" binding="clearConsoleButton" default-binding="true">
+      <component id="1394a" class="io.mohoromitch.goblast.Button" binding="clearConsoleButton" default-binding="true">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -91,7 +91,7 @@
           <text value="Clear Console"/>
         </properties>
       </component>
-      <component id="d85a4" class="javax.swing.JButton" binding="executeCommandButton" default-binding="true">
+      <component id="14b25" class="io.mohoromitch.goblast.Button" binding="executeCommandButton" default-binding="true">
         <constraints>
           <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -99,7 +99,7 @@
           <text value="Execute Command"/>
         </properties>
       </component>
-      <component id="ee138" class="javax.swing.JButton" binding="clearCommandFieldButton" default-binding="true">
+      <component id="11b9e" class="io.mohoromitch.goblast.Button" binding="clearCommandFieldButton" default-binding="true">
         <constraints>
           <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -115,7 +115,7 @@
           <model/>
         </properties>
       </component>
-      <component id="f3f10" class="javax.swing.JButton" binding="outputTableContentsButton">
+      <component id="cb9b8" class="io.mohoromitch.goblast.Button" binding="outputTableContentsButton">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -131,7 +131,7 @@
           <model/>
         </properties>
       </component>
-      <component id="6370a" class="javax.swing.JButton" binding="outputViewContentsButton">
+      <component id="26a50" class="io.mohoromitch.goblast.Button" binding="outputViewContentsButton">
         <constraints>
           <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

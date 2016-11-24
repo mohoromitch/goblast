@@ -3,29 +3,35 @@ package io.mohoromitch.goblast;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
+
+import static io.mohoromitch.goblast.NotificationManager.*;
 
 /**
  * Created by Frank on 2016-11-23.
  */
-public class MainForm extends JFrame {
+public class MainForm extends JFrame implements NotificationListener {
 	private JPanel panel;
 	private JTextPane console;
 	private JTextArea commandTextField;
-	private JButton clearConsoleButton;
-	private JButton createTablesButton;
-	private JButton populateTablesButton;
-	private JButton createViewsButton;
-	private JButton dropViewsButton;
-	private JButton dropTablesButton;
-	private JButton executeCommandButton;
-	private JButton clearCommandFieldButton;
+	private Button clearConsoleButton;
+	private Button createTablesButton;
+	private Button populateTablesButton;
+	private Button createViewsButton;
+	private Button dropViewsButton;
+	private Button dropTablesButton;
+	private Button executeCommandButton;
+	private Button clearCommandFieldButton;
 	private JComboBox tableComboBox;
-	private JButton outputTableContentsButton;
+	private Button outputTableContentsButton;
 	private JComboBox comboBox1;
-	private JButton outputViewContentsButton;
+	private Button outputViewContentsButton;
+
+	final static NotificationManager NM = NotificationManager.getSharedInstance();
 
 	public MainForm() {
 		super("GOBLAST");
+		NotificationManager.getSharedInstance().addListener(this);
 		setContentPane(panel);
 		pack();
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -41,52 +47,43 @@ public class MainForm extends JFrame {
 	}
 
 	private void wireButtons() {
-		clearConsoleButton.addMouseListener(new MouseAdapter() {
+		clearConsoleButton.addClickAction(() -> {
+			System.out.println("Console cleared.");
+			consoleSet("");
+		});
+
+		createTablesButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				System.out.println("Console cleared.");
-				consoleSet("");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				dao.createAllTables();
+				nm.notify(NOTIFICATION_TABLES_CREATED, null);
 			}
 		});
 
-		createTablesButton.addMouseListener(new MouseAdapter() {
+		dropTablesButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Create tables button was pressed.");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				dao.dropAllTables();
+				nm.notify(NOTIFICATION_TABLES_DROPPED, null);
 			}
 		});
 
-		populateTablesButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Populate tables button was pressed.");
-			}
+		populateTablesButton.addClickAction(() -> {
+			consoleAppend("Populate tables button was pressed.");
 		});
 
-		createViewsButton.addMouseListener(new MouseAdapter() {
+		createViewsButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Create views button was pressed.");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				dao.createAllViews();
+				nm.notify(NOTIFICATION_VIEWS_CREATED, null);
 			}
 		});
-
-		dropViewsButton.addMouseListener(new MouseAdapter() {
+		dropViewsButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Drop views button was pressed.");
-			}
-		});
-
-		dropTablesButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Drop tables button was pressed.");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				dao.dropAllViews();
+				nm.notify(NOTIFICATION_VIEWS_CREATED, null);
 			}
 		});
 
@@ -122,5 +119,17 @@ public class MainForm extends JFrame {
 				consoleAppend("Output view contents button was pressed.");
 			}
 		});
+	}
+
+	@Override
+	public void onNotification(String tag, Object payload) {
+		switch (tag) {
+			case NOTIFICATION_LOG:
+				consoleAppend(payload.toString());
+				break;
+			case NotificationManager.NOTIFICATION_SQL_ERROR:
+				consoleAppend(payload.toString());
+				break;
+		}
 	}
 }
