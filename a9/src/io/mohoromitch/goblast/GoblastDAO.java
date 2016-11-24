@@ -1,5 +1,6 @@
 package io.mohoromitch.goblast;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -20,5 +21,12 @@ public class GoblastDAO {
 
 	public ResultSet getViewList() throws SQLException {
 		return database.execute("SELECT view_name FROM user_views");
+	}
+
+	public ResultSet getAllTableContentsOf(String table) throws SQLException {
+		String query = "SELECT * FROM ?";
+		PreparedStatement ps = database.getPreparedStatementFrom(query);
+		ps.setString(1, "PLAYERS");
+		return ps.executeQuery();
 	}
 }

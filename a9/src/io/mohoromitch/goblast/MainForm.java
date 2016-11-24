@@ -32,11 +32,11 @@ public class MainForm extends JFrame {
 		wireButtons();
 	}
 
-	private void consoleSet(String message) {
+	public void consoleSet(String message) {
 		console.setText(message);
 	}
 
-	private void consoleAppend(String message) {
+	public void consoleAppend(String message) {
 		console.setText(console.getText() + "\n" + message);
 	}
 

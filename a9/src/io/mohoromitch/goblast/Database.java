@@ -1,6 +1,8 @@
 package io.mohoromitch.goblast;
 import java.sql.*;
 import java.text.CollationElementIterator;
+import java.util.Map;
+import java.util.concurrent.Callable;
 
 /**
  * Created by mitchellmohorovich on 2016-11-24.
@@ -46,6 +48,10 @@ public class Database {
 			throw e;
 		}
 		return rs;
+	}
+
+	public PreparedStatement getPreparedStatementFrom (String query) throws SQLException {
+		return connection.prepareStatement(query);
 	}
 
 }
