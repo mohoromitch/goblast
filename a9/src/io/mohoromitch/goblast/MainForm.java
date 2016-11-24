@@ -19,6 +19,10 @@ public class MainForm extends JFrame {
 	private JButton dropTablesButton;
 	private JButton executeCommandButton;
 	private JButton clearCommandFieldButton;
+	private JComboBox tableComboBox;
+	private JButton outputTableContentsButton;
+	private JComboBox comboBox1;
+	private JButton outputViewContentsButton;
 
 	public MainForm() {
 		super("GOBLAST");
@@ -100,6 +104,22 @@ public class MainForm extends JFrame {
 				super.mouseClicked(e);
 				commandTextField.setText("");
 				System.out.println("Command field cleared.");
+			}
+		});
+
+		outputTableContentsButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("View table contents button was pressed.");
+			}
+		});
+
+		outputViewContentsButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Output view contents button was pressed.");
 			}
 		});
 	}
