@@ -8,20 +8,98 @@ import java.awt.event.MouseEvent;
  * Created by Frank on 2016-11-23.
  */
 public class MainForm extends JFrame {
-	private JButton testButton;
-	private JPanel panel1;
+	private JPanel panel;
+	private JTextPane console;
+	private JTextArea commandTextField;
+	private JButton clearConsoleButton;
+	private JButton createTablesButton;
+	private JButton populateTablesButton;
+	private JButton createViewsButton;
+	private JButton dropViewsButton;
+	private JButton dropTablesButton;
+	private JButton executeCommandButton;
+	private JButton clearCommandFieldButton;
 
 	public MainForm() {
 		super("GOBLAST");
-		setContentPane(panel1);
+		setContentPane(panel);
 		pack();
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		// We should make each triggered event an action, that wraps the sql and model changes for maintainability
-		testButton.addMouseListener(new MouseAdapter() {
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		wireButtons();
+	}
+
+	private void consoleSet(String message) {
+		console.setText(message);
+	}
+
+	private void consoleAppend(String message) {
+		console.setText(console.getText() + "\n" + message);
+	}
+
+	private void wireButtons() {
+		clearConsoleButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				super.mouseClicked(e);
-				System.out.println("Test");
+				System.out.println("Console cleared.");
+				consoleSet("");
+			}
+		});
+
+		createTablesButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Create tables button was pressed.");
+			}
+		});
+
+		populateTablesButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Populate tables button was pressed.");
+			}
+		});
+
+		createViewsButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Create views button was pressed.");
+			}
+		});
+
+		dropViewsButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Drop views button was pressed.");
+			}
+		});
+
+		dropTablesButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Drop tables button was pressed.");
+			}
+		});
+
+		executeCommandButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				consoleAppend("Execute command button was pressed.");
+			}
+		});
+
+		clearCommandFieldButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				commandTextField.setText("");
+				System.out.println("Command field cleared.");
 			}
 		});
 	}
