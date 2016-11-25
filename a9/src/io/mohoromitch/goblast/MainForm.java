@@ -85,6 +85,7 @@ public class MainForm extends JFrame implements NotificationListener {
 			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
 				dao.createAllViews();
 				nm.notify(NOTIFICATION_VIEWS_CREATED, null);
+				nm.notify(NOTIFICATION_VIEWS_CREATED, null);
 				nm.log("Views created successfully!");
 			}
 		});
@@ -102,7 +103,7 @@ public class MainForm extends JFrame implements NotificationListener {
 			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
 				String sql = commandTextField.getText().trim();
 				ResultSet rs = dao.executeRaw(sql);
-				NM.log(Util.resultSetToString(rs));
+				nm.log(Util.resultSetToString(rs));
 			}
 		});
 
@@ -129,9 +130,49 @@ public class MainForm extends JFrame implements NotificationListener {
 		});
 	}
 
+	private void populateTablesSelection() {
+		tableComboBox.removeAllItems();
+		try {
+			GoblastDAO dao = GoblastDAO.getSharedInstance();
+			ResultSet rs = dao.getTableList();
+			while(rs.next()) {
+				tableComboBox.addItem(rs.getString(1));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void populateViewsSelection() {
+		comboBox1.removeAllItems();
+		try {
+			GoblastDAO dao = GoblastDAO.getSharedInstance();
+			ResultSet rs = dao.getViewList();
+			while(rs.next()) {
+				comboBox1.addItem(rs.getString(1));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	@Override
 	public void onNotification(String tag, Object payload) {
 		switch (tag) {
+			case NOTIFICATION_DB_CONNECTED:
+				NM.log("Database connection established successfully!");
+				NM.log("Welcome!");
+				populateTablesSelection();
+				populateViewsSelection();
+				break;
+			case NOTIFICATION_TABLES_CREATED:
+			case NOTIFICATION_TABLES_DROPPED:
+				populateTablesSelection();
+				break;
+			case NOTIFICATION_VIEWS_CREATED:
+			case NOTIFICATION_VIEWS_DROPPED:
+				populateViewsSelection();
+				break;
 			case NOTIFICATION_LOG:
 				consoleAppend(payload.toString());
 				break;

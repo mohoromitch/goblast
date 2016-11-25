@@ -12,8 +12,7 @@ public class Main {
 			//mainForm.consoleSet("Establishing database connection...");
 			nm.log("Establishing database connection...");
 			GoblastDAO dao = GoblastDAO.getSharedInstance();
-			nm.log("Database connection established successfully!");
-			nm.log("Welcome!");
+			nm.notify(NotificationManager.NOTIFICATION_DB_CONNECTED, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(1);

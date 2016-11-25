@@ -9,6 +9,7 @@ import java.util.List;
  * Created by Frank on 2016-11-24.
  */
 public class NotificationManager {
+	public final static String NOTIFICATION_DB_CONNECTED = "dbConnected";
 	public final static String NOTIFICATION_LOG = "consoleLog";
 	public final static String NOTIFICATION_SQL_ERROR = "sqlError";
 	public final static String NOTIFICATION_TABLES_DROPPED = "tablesDropped";
