@@ -3,7 +3,6 @@ package io.mohoromitch.goblast;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  * Created by mitchellmohorovich on 2016-11-24.
@@ -60,7 +59,7 @@ public class GoblastDAO {
 	}
 
 	public ResultSet executeRaw(String query) throws SQLException {
-		return database.executeRaw(query);
+		return database.execute(query);
 	}
 
 }

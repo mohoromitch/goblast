@@ -471,14 +471,14 @@ public class Queries {
 			"\n";
 
 	public static final String C_TABLES =
-		"CREATE TABLE TEAMS\n" +
+		"CREATE TABLE MMOHOROV.TEAMS\n" +
 			"(\n" +
 			"  id INT PRIMARY KEY NOT NULL,\n" +
 			"  name VARCHAR(25)\n" +
 			");\n" +
 			"\n" +
 			"\n" +
-			"CREATE TABLE PLAYERS\n" +
+			"CREATE TABLE MMOHOROV.PLAYERS\n" +
 			"(\n" +
 			"  id INT PRIMARY KEY NOT NULL,\n" +
 			"  first_name VARCHAR(25),\n" +
@@ -486,7 +486,7 @@ public class Queries {
 			");\n" +
 			"\n" +
 			"\n" +
-			"CREATE TABLE SEASONS\n" +
+			"CREATE TABLE MMOHOROV.SEASONS\n" +
 			"(\n" +
 			"  id INT PRIMARY KEY,\n" +
 			"  year INT NOT NULL,\n" +

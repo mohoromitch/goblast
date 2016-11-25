@@ -14,6 +14,8 @@ public class Database {
 		NAME = "orcl";
 	public static final int PORT = 1521;
 
+	private static final NotificationManager NM = NotificationManager.getSharedInstance();
+
 	final Thread MAIN_THREAD = Thread.currentThread();
 	private Connection connection;
 
@@ -42,40 +44,30 @@ public class Database {
 		}
 	}
 
-	public ResultSet executeRaw(String query) throws SQLException {
+	public ResultSet execute(String query) throws SQLException {
 		return connection.createStatement().executeQuery(query);
 	}
 
-	public ResultSet execute(String query) throws SQLException {
-		ResultSet rs;
-		try {
-			CallableStatement cs = connection.prepareCall(query);
-			cs.execute();
-			rs = cs.getResultSet();
-		} catch (SQLException e) {
-			throw e;
-		}
-		return rs;
-	}
-
-	public void executeBatch(String query) throws SQLException {
+	public void executeBatch(String query) {
 		for (String q : query.split(";")) {
 			q.replace("\n", " ");
-			q.replace(",", ", ");
 			String trimmed = q.trim();
 			if (!trimmed.isEmpty()) {
-				execute(trimmed).close();
+				ResultSet rs = null;
+				try {
+					rs = execute(trimmed);
+					if (rs != null) rs.close();
+				} catch (Exception e) {
+					NM.notify(NotificationManager.NOTIFICATION_SQL_ERROR, e);
+					e.printStackTrace();
+				}
 			}
 		}
+
 	}
 
 	public PreparedStatement getPreparedStatementFrom (String query) throws SQLException {
 		return connection.prepareStatement(query);
 	}
-
-	public Statement createStatement() throws SQLException {
-		return connection.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-	}
-
 
 }
