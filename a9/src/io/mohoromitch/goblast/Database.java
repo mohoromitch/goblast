@@ -42,6 +42,10 @@ public class Database {
 		}
 	}
 
+	public ResultSet executeRaw(String query) throws SQLException {
+		return connection.createStatement().executeQuery(query);
+	}
+
 	public ResultSet execute(String query) throws SQLException {
 		ResultSet rs;
 		try {
@@ -60,7 +64,7 @@ public class Database {
 			q.replace(",", ", ");
 			String trimmed = q.trim();
 			if (!trimmed.isEmpty()) {
-				execute(trimmed);
+				execute(trimmed).close();
 			}
 		}
 	}

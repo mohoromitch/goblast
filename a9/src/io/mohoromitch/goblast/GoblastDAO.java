@@ -41,36 +41,26 @@ public class GoblastDAO {
 
 	public void createAllTables() throws SQLException {
 		database.executeBatch(Queries.C_TABLES);
-		/*
-		Statement s = database.createStatement();
-		Queries.addBatchQuery(Queries.C_TABLES, s);
-		s.executeBatch();
-		*/
 	}
 
 	public void dropAllTables() throws SQLException {
 		database.executeBatch(Queries.D_TABLES);
-		/*
-		Statement s = database.createStatement();
-		Queries.addBatchQuery(Queries.D_TABLES, s);
-		s.executeBatch();
-		*/
 	}
 
 	public void populateTables() throws SQLException {
-		database.execute(Queries.P_TABLES);
+		database.executeBatch(Queries.P_TABLES);
 	}
 
 	public void createAllViews() throws SQLException {
-		Statement s = database.createStatement();
-		Queries.addBatchQuery(Queries.C_VIEWS, s);
-		s.executeBatch();
+		database.executeBatch(Queries.C_VIEWS);
 	}
 
 	public void dropAllViews() throws SQLException {
-		Statement s = database.createStatement();
-		Queries.addBatchQuery(Queries.D_VIEWS, s);
-		s.executeBatch();
+		database.executeBatch(Queries.D_VIEWS);
+	}
+
+	public ResultSet executeRaw(String query) throws SQLException {
+		return database.executeRaw(query);
 	}
 
 }
