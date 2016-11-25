@@ -32,9 +32,8 @@ public class GoblastDAO {
 	}
 
 	public ResultSet getAllTableContentsOf(String table) throws SQLException {
-		String query = "SELECT * FROM ?";
+		String query = "SELECT * FROM "+table;
 		PreparedStatement ps = database.getPreparedStatementFrom(query);
-		ps.setString(1, table);
 		return ps.executeQuery();
 	}
 

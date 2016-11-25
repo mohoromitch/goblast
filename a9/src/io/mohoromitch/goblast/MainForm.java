@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import static io.mohoromitch.goblast.NotificationManager.*;
@@ -111,23 +110,38 @@ public class MainForm extends JFrame implements NotificationListener {
 			commandTextField.setText("");
 		});
 
-		// TODO
-		outputTableContentsButton.addMouseListener(new MouseAdapter() {
+		outputTableContentsButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("View table contents button was pressed.");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				if (tableComboBox.getSelectedItem() != null) {
+					String tableName = tableComboBox.getSelectedItem().toString();
+					if (tableName != null && !tableName.isEmpty()) {
+						nm.log("Loading table contents for %s", tableName);
+						ResultSet rs = dao.getAllTableContentsOf(tableName);
+						nm.log(Util.resultSetToString(rs));
+					}
+				} else {
+					nm.log("Error: No table was selected!");
+				}
 			}
 		});
 
-		// TODO
-		outputViewContentsButton.addMouseListener(new MouseAdapter() {
+		outputViewContentsButton.addClickAction(new DatabaseAction() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				super.mouseClicked(e);
-				consoleAppend("Output view contents button was pressed.");
+			void preformAction(GoblastDAO dao, NotificationManager nm) throws SQLException {
+				if (comboBox1.getSelectedItem() != null) {
+					String viewName = comboBox1.getSelectedItem().toString();
+					if (viewName != null && !viewName.isEmpty()) {
+						nm.log("Loading table contents for %s", viewName);
+						ResultSet rs = dao.getAllTableContentsOf(viewName);
+						nm.log(Util.resultSetToString(rs));
+					}
+				} else {
+					nm.log("Error: No view was selected!");
+				}
 			}
 		});
+
 	}
 
 	private void populateTablesSelection() {

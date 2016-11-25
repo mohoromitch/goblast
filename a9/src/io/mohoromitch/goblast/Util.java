@@ -31,7 +31,7 @@ public class Util {
 	}
 
 	private static String pad(String toPad, String padding) {
-		//if (toPad.length() > padding.length()) return toPad;
+		if (toPad.length() > padding.length()) return toPad;
 		return toPad + padding.substring(toPad.length());
 	}
 }
