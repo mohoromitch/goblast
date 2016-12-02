@@ -140,23 +140,24 @@ SELECT * FROM TEAMS WHERE TEAMS.NAME = 'The Mathletes';
 
 #### Relational Algebra
 
-σ<sub>visitor_score = home_score</sub> (Games)
+$\sigma_{visitor\_score = home\_score}(Games)$
 
-σ<sub>visitor_score > home_score</sub> (Games)
+$\sigma_{visitor\_score > home\_score}(Games)$
 
-σ<sub>visitor_score < home_score</sub> (Games)
+$\sigma_{visitor\_score < home\_score}(Games)$
 
-σ<sub>first_name = 'Regina'</sub> (Players)
+$\sigma_{first\_name = 'Regina'}(Players)$
 
-σ<sub>year < 2016</sub> (Seasons)
+$\sigma_{year < 2016}(Seasons)$ 
 
-σ<sub>year = 2016</sub> (Seasons)
+$\sigma_{year = 2016}(Seasons)$ 
 
-σ<sub>team_id = 1</sub> (Plays_for)
+$\sigma_{team\_id = 1}(Plays\_for)$
 
-σ<sub>statistics.hr > 0 </sub> (Statistics)
+$\sigma_{statistics.hr > 0}(Statistics)$
 
-σ<sub>name = 'The Mathletes'</sub> (Teams)
+$\sigma_{name = 'The Mathletes'}(Teams)$
+
 
 The following SQL queries below contain the view generation code for assignment 4.
 
@@ -216,20 +217,20 @@ SELECT
   PLAYER_FNAME AS "First Name",
   PLAYER_LNAME AS "Last Name",
   SEASON_ID AS "Season ID",
-  TRUNC(AB_AVG, 1) AS "Season AB",
-  TRUNC(R_AVG, 1) AS "Season R",
-  TRUNC(RBI_AVG, 1) AS "Season RBI",
-  TRUNC("1B_AVG", 1) AS "Season 1B",
-  TRUNC("2B_AVG", 1) AS "Season 2B",
-  TRUNC("3B_AVG", 1) AS "Season 3B",
-  TRUNC(HR_AVG, 1) AS "Season HR",
-  TRUNC(H, 1) AS "Season Hits",
-  TRUNC(BA, 1) AS "Season Batting Average"
+  TRUNC(AB_AVG, 1) AS "S AB",
+  TRUNC(R_AVG, 1) AS "S R",
+  TRUNC(RBI_AVG, 1) AS "S RBI",
+  TRUNC("1B_AVG", 1) AS "S 1B",
+  TRUNC("2B_AVG", 1) AS "S 2B",
+  TRUNC("3B_AVG", 1) AS "S 3B",
+  TRUNC(HR_AVG, 1) AS "S HR",
+  TRUNC(H, 1) AS "S Hits",
+  TRUNC(BA, 1) AS "SBA"
 FROM PLAYER_SEASON_STATS;
 ```
 
 ##### Result
-|Player ID|First Name|Last Name|Season ID|Season AB|Season R|Season RBI|Season 1B|Season 2B|Season 3B|Season HR|Season Hits|Season Batting Average|
+|Player ID|First Name    |Last Name         |Season ID|S AB|S R|S RBI|S 1B|S 2B|S 3B|S HR|S Hits|S BA|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 |0|Cady|Heron|1|7|0.7|0.7|0|0|0.2|0.5|3|0.1|
 |0|Cady|Heron|2|5|0.2|0.7|0|0|0|0.2|1|0|
@@ -332,7 +333,7 @@ FROM PLAYER_CAREER_STATS;
 
 ##### Result
 
-|Player ID|First Name|Last Name|Career AB|Career R|Career RBI|Career 1B|Career 2B|Career 3B|Career HR|Career Hits|Career Batting Average|
+|Player ID|First Name         |Last Name          |Career AB|Career R|Career RBI|Career 1B|Career 2B|Career 3B|Career HR|Career Hits|Career Batting Average|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
 |13|Coach|Carr|5.5|0.1|0.3|0.1|0|0.1|0.1|1.5|0|
 |8|Glenn|Cocoo|5.5|0.1|0.2|0|0.2|0.1|0|1.5|0|
@@ -400,17 +401,18 @@ ORDER BY SEASON_ID ASC, TEAM_ID ASC;
 
 ##### Relational Algebra
 
-home ← π<sub>season\_id, home\_team\_id, SUM home\_score</sub> (Games)
+$home \leftarrow \pi_{season\_id, home\_team\_id, SUM home\_score}(Games)$
 
-visitor ← π<sub>season\_id, visitor\_team\_id, SUM visitor\_score</sub> (Games)
+$visitor \leftarrow \pi_{season\_id, visitor\_team\_id, SUM visitor\_score}(Games)$
 
-union ← home ∪ visitor
+$union \leftarrow home \cup visitor$
 
-team\_join ← union ⋈<sub>home\_team\_id = id</sub> teams 
+$team\_join \leftarrow union \Join_{home\_team\_id = id} Teams$
 
-seasons\_join ← team\_join ⋈<sub>season\_id = id</sub> seasons
+$seasons\_join \leftarrow \Join_{season\_id = id} seasons$
 
-π<sub>season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum</sub> (seasons\_join)
+$\pi_{season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum} (seasons\_join)$
+
 
 ##### Result
 |SEASON_ID|TEAM_ID|Team Name|Season Year|Season Type|Team Runs Per Season|
@@ -451,7 +453,7 @@ ORDER BY SEASON_ID, BA DESC;
 
 ##### Result
 
-|Season Ranking|Player First Name|Player Last Name|Season ID|Season Year|Season Type|Batting Average|
+|Season Ranking|Player First Name         |Player Last Name          |Season ID|Season Year|Season Type|Batting Average|
 |--- |--- |--- |--- |--- |--- |--- |
 |1|Karen|Smith|1|2015|regular|0.208|
 |2|Kevin|Gnapoor|1|2015|regular|0.125|
@@ -505,17 +507,18 @@ ORDER BY SEASON_ID ASC, TEAM_ID ASC;
 
 ##### Relational Algebra
 
-home ← π<sub>season\_id, home\_team\_id, SUM home\_score</sub> (Games)
+$home \leftarrow_{season\_id, home\_team\_id, SUM home\_score} (Games)$
 
-visitor ← π<sub>season\_id, visitor\_team\_id, SUM visitor\_score</sub> (Games)
+$visitor \leftarrow_{season\_id, visitor\_team\_id, SUM visitor\_score} (Games)$
 
-union ← home ∪ visitor
+$union \leftarrow home \cup visitor$
 
-team\_join ← union ⋈<sub>home\_team\_id = id</sub> teams 
+$team\_join \leftarrow union \Join_{home\_team\_id = id} Teams$
 
-seasons\_join ← team\_join ⋈<sub>season\_id = id</sub> seasons
+$seasons\_join \leftarrow team\_join \Join_{season\_id = id} seasons$
 
-π<sub>season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum</sub> (seasons\_join)
+$\pi_{season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum} (seasons\_join)$
+
 
 ##### Result
 |SEASON_ID|TEAM_ID|Team Name|Season Year|Season Type|Team Runs Per Season|
@@ -556,15 +559,19 @@ ORDER BY SEASON_ID, BA DESC;
 
 ##### Relational Algebra
 
-subquery ← π <sub>player\_id, player\_fname, player\_lname, season\_id, ba, ROW\_NUMBER() OVER (PARTITION BY season\_id</sub> (player\_season\_stats)
+$subquery \leftarrow \pi_{player\_id, player\_fname, player\_lname, season\_id, ba, ROW\_NUMBER() OVER (PARTITION BY season\_id}$
+$(player\_season\_stats)$
 
-condition ← σ <sub> ROW\_NUMBER() OVER (PARTITION BY season\_id) ≤ 5 </sub> (subquery)
+$condition \leftarrow \sigma_{ROW\_NUMBER() OVER (PARTITION BY season\_id) \leq 5} (subquery)$
 
-π <sub> ROW\_NUMBER() OVER (PARTITION BY season\_id), player\_fname, player\_lname, season\_id, seasons.year, seasons.type, TRUNC(ba, 3) </sub> (condition) 
+$\pi_{ROW\_NUMBER() OVER (PARTITION BY season\_id), player\_fname, player\_lname, season\_id, seasons.year, seasons.type, TRUNC(ba, 3)}$
+$(condition)$
+
+
 
 ##### Result
 
-|Season Ranking|Player First Name|Player Last Name|Season ID|Season Year|Season Type|Batting Average|
+|Season Ranking|Player First Name          |Player Last Name        |Season ID|Season Year|Season Type|Batting Average|
 |--- |--- |--- |--- |--- |--- |--- |
 |1|Karen|Smith|1|2015|regular|0.208|
 |2|Kevin|Gnapoor|1|2015|regular|0.125|
@@ -610,26 +617,27 @@ FROM PLAYERS p
              ) s ON p.ID = s.PLAYER_ID ORDER BY BA DESC;
 ```
 
-##### Relational Algebra
+##### Relational Algebra (5)
 
-condition ← σ <sub>game\_date > TO_DATE(:sd) AND game\_date < TO\_DATE(:ed)</sub> (games)
+$condition \leftarrow \sigma_{game\_date > TO\_DATE(:sd) AND game\_date < TO\_DATE(:ed)} (Games)$
 
-subquery ← π <sub>COUNT(*), player\_id, ba </sub> (condition)
+$subquery \leftarrow_{COUNT(*), player\_id, ba} (condition)$
 
-join ← subquery ⋈ <sub> games.id = statistics.game\_id </sub> (statistics)
+$join \leftarrow subquery \Join_{games.id = statistics.game\_id} (statistics)$
 
-subselect ← π <sub>player\_id, ba, gp</sub> (join)
+$subselect \leftarrow \pi_{player\_id, ba, gp} (join)$
 
-join2 ← players ⋈ <sub>players.id = player\_id</sub> (subselect)
+$join2 \leftarrow players \Join_{players.id = player\_id} (subselect)$
 
-π <sub>first\_name, last\_name, ba, gp, ba/gp</sub> (join2)
+$result \leftarrow \pi_{first\_name, last\_name, ba, gp, ba/gp} (join2)$
+
 
 
 ##### Result
 
 Given the values `16-10-03` and `16-10-13` for the bind variables `:sd` and `:ed`, the following result is produced:
 
-|FIRST NAME|LAST NAME|BA|GAMES PLAYED|AVG POINTS PER GAME|
+|FIRST NAME    |LAST NAME   |BA    |GAMES PLAYED     |AVG POINTS PER GAME  |
 |--- |--- |--- |--- |--- |
 |Kevin|Gnapoor|0.2|2|0.1|
 |Trang|Pak|0.2|2|0.1|
@@ -700,17 +708,20 @@ FROM (
 ORDER BY SEASON_ID, GAME_ID;
 ```
 
-##### Relational Algebra
+##### Relational Algebra (6)
 
-inner ← π <sub> id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, home\_score - visitor\_score</sub> (games)
+$inner \leftarrow \pi_{id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, home\_score - visitor\_score} (Games)$
 
-inner2 ← π <sub>game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id</sub> (inner)
+$inner2 \leftarrow \pi_{game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id} (inner)$
 
-π <sub>game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id, teams.name </sub> (inner2) ⋈ <sub>winning\_team\_id = teams.id </sub> (teams)
+$result \leftarrow \pi_{game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id, teams.name} (inner2)$
+$\Join_{winning\_team\_id = teams.id} teams$
+
+
 
 
 ##### Result
-|GAME_ID|SEASON_ID|HOME_TEAM_ID|VISITOR_TEAM_ID|HOME_SCORE|VISITOR_SCORE|WINNING_TEAM_ID|WINNING_TEAM_NAME|
+|GAME ID|SEASON ID|HOME TEAM ID|VISITOR TEAM ID|HOME SCORE|VISITOR SCORE|WINNING TEAM ID|WINNING TEAM NAME|
 |--- |--- |--- |--- |--- |--- |--- |--- |
 |1|1|1|2|5|2|1|The Plastics|
 |2|1|1|2|3|6|2|The Mathletes|
@@ -763,14 +774,14 @@ GROUP BY TEAMS.ID, TEAMS.NAME, SEASON_ID
 ORDER BY SEASON_ID, TEAMS.ID;
 ```
 
-##### Relational Algebra
-← π ⋈ σ
+##### Relational Algebra (7)
 
-inner ← π <sub> id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, home\_score - visitor\_score</sub> (games)
+$inner \leftarrow \pi_{id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, home\_score - visitor\_score} (Games)$
 
-inner2 ← π <sub>game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id</sub> (inner)
+$inner2 \leftarrow \pi_{game\_id, season\_id, home\_team\_id, visitor\_team\_id, home\_score, visitor\_score, winning\_team\_id} (inner)$
 
-π <sub>teams.id, teams.name, season\_id, COUNT winning\_team\_id</sub> (inner2) ⋈ <sub>winning\_team\_id = teams.id </sub> (teams)
+$result \leftarrow \pi_{teams.id, teams.name, season\_id, COUNT winning\_team\_id} (inner2) \Join_{winning\_team\_id = teams.id} (teams)$
+
 
 ##### Result
 
