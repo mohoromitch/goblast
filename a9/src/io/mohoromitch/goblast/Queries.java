@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
+ * A list of queries taken from the previous assignments.
  * Created by Frank on 2016-11-24.
  */
 public class Queries {

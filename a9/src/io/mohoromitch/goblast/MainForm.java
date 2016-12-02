@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import static io.mohoromitch.goblast.NotificationManager.*;
 
 /**
+ * The logic component of the UI. <br /><b>NOTE: Code for populating the ui was designed useing the GUI designer, and built during compile time through InteliJ.</b>
  * Created by Frank on 2016-11-23.
  */
 public class MainForm extends JFrame implements NotificationListener {
@@ -31,6 +32,7 @@ public class MainForm extends JFrame implements NotificationListener {
 	final static NotificationManager NM = NotificationManager.getSharedInstance();
 
 	public MainForm() {
+		// Initialize everything
 		super("GOBLAST");
 		NotificationManager.getSharedInstance().addListener(this);
 		setContentPane(panel);
@@ -39,14 +41,25 @@ public class MainForm extends JFrame implements NotificationListener {
 		wireButtons();
 	}
 
+	/**
+	 * Set the exact text in the console ui.
+	 * @param message Message to set.
+	 */
 	public void consoleSet(String message) {
 		console.setText(message);
 	}
 
+	/**
+	 * Append text to the console.
+	 * @param message Text to append.
+	 */
 	public void consoleAppend(String message) {
 		console.setText(console.getText() + "\n" + message);
 	}
 
+	/**
+	 * Initializes logic for buttons.
+	 */
 	private void wireButtons() {
 		clearConsoleButton.addClickAction(() -> {
 			System.out.println("Console cleared.");
@@ -144,6 +157,9 @@ public class MainForm extends JFrame implements NotificationListener {
 
 	}
 
+	/**
+	 * Populates the table drop down with all available table names.
+	 */
 	private void populateTablesSelection() {
 		tableComboBox.removeAllItems();
 		try {
@@ -157,6 +173,9 @@ public class MainForm extends JFrame implements NotificationListener {
 		}
 	}
 
+	/**
+	 * Populates the views drop down with all available views.
+	 */
 	private void populateViewsSelection() {
 		comboBox1.removeAllItems();
 		try {
@@ -170,6 +189,11 @@ public class MainForm extends JFrame implements NotificationListener {
 		}
 	}
 
+	/**
+	 * Listens for boradcasts and takes action based on the type.
+	 * @param tag Tag of the boradcast.
+	 * @param payload Broadcast payload.
+	 */
 	@Override
 	public void onNotification(String tag, Object payload) {
 		switch (tag) {
