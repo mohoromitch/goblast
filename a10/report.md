@@ -229,48 +229,49 @@ FROM PLAYER_SEASON_STATS;
 ```
 
 ##### Result
-<table border="1" style="border-collapse:collapse">
-<tr><th>Player ID</th><th>First Name</th><th>Last Name</th><th>Season ID</th><th>Season AB</th><th>Season R</th><th>Season RBI</th><th>Season 1B</th><th>Season 2B</th><th>Season 3B</th><th>Season HR</th><th>Season Hits</th><th>Season Batting Average</th></tr>
-<tr><td>0</td><td>Cady</td><td>Heron</td><td>1</td><td>7</td><td>0.7</td><td>0.7</td><td>0</td><td>0</td><td>0.2</td><td>0.5</td><td>3</td><td>0.1</td></tr>
-<tr><td>0</td><td>Cady</td><td>Heron</td><td>2</td><td>5</td><td>0.2</td><td>0.7</td><td>0</td><td>0</td><td>0</td><td>0.2</td><td>1</td><td>0</td></tr>
-<tr><td>1</td><td>Regina</td><td>George</td><td>1</td><td>7</td><td>0.5</td><td>0.7</td><td>0</td><td>0</td><td>0.2</td><td>0.2</td><td>2</td><td>0</td></tr>
-<tr><td>1</td><td>Regina</td><td>George</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>2</td><td>Gretchen</td><td>Wieners</td><td>1</td><td>7</td><td>0.2</td><td>0</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>2</td><td>Gretchen</td><td>Wieners</td><td>2</td><td>5</td><td>0.2</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>3</td><td>Janis</td><td>Ian</td><td>1</td><td>7</td><td>0.5</td><td>0.2</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>3</td><td>Janis</td><td>Ian</td><td>2</td><td>5</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>4</td><td>Karen</td><td>Smith</td><td>1</td><td>6</td><td>0.5</td><td>0</td><td>0.5</td><td>0.5</td><td>0</td><td>0.2</td><td>5</td><td>0.2</td></tr>
-<tr><td>4</td><td>Karen</td><td>Smith</td><td>2</td><td>5</td><td>0.5</td><td>0.5</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>2</td><td>0.1</td></tr>
-<tr><td>5</td><td>Kevin</td><td>Gnapoor</td><td>1</td><td>6</td><td>0.2</td><td>0.5</td><td>0.5</td><td>0</td><td>0</td><td>0.2</td><td>3</td><td>0.1</td></tr>
-<tr><td>5</td><td>Kevin</td><td>Gnapoor</td><td>2</td><td>5</td><td>0.5</td><td>0.5</td><td>0.2</td><td>0.5</td><td>0</td><td>0</td><td>3</td><td>0.1</td></tr>
-<tr><td>6</td><td>Trang</td><td>Pak</td><td>1</td><td>6</td><td>0</td><td>0.7</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>6</td><td>Trang</td><td>Pak</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.5</td><td>0</td><td>0.2</td><td>0</td><td>3</td><td>0.1</td></tr>
-<tr><td>7</td><td>Aaron</td><td>Samuels</td><td>1</td><td>6</td><td>0.2</td><td>0.5</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>7</td><td>Aaron</td><td>Samuels</td><td>2</td><td>5</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.2</td><td>1</td><td>0</td></tr>
-<tr><td>8</td><td>Glenn</td><td>Cocoo</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>8</td><td>Glenn</td><td>Cocoo</td><td>2</td><td>5</td><td>0.2</td><td>0.5</td><td>0</td><td>0.2</td><td>0.2</td><td>0</td><td>2</td><td>0.1</td></tr>
-<tr><td>9</td><td>Shane</td><td>Oman</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>9</td><td>Shane</td><td>Oman</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>10</td><td>Ms.</td><td>Norbury</td><td>1</td><td>7</td><td>0.2</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>10</td><td>Ms.</td><td>Norbury</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.5</td><td>0.2</td><td>0</td><td>0</td><td>3</td><td>0.1</td></tr>
-<tr><td>11</td><td>Mrs.</td><td>George</td><td>1</td><td>7</td><td>0.2</td><td>0.7</td><td>0</td><td>0.2</td><td>0</td><td>0.2</td><td>2</td><td>0</td></tr>
-<tr><td>11</td><td>Mrs.</td><td>George</td><td>2</td><td>5</td><td>0.2</td><td>0.5</td><td>0.2</td><td>0</td><td>0.5</td><td>0</td><td>3</td><td>0.1</td></tr>
-<tr><td>12</td><td>Caroline</td><td>Krafft</td><td>1</td><td>6</td><td>0.2</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>12</td><td>Caroline</td><td>Krafft</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0</td><td>0.2</td><td>0.2</td><td>0</td><td>2</td><td>0.1</td></tr>
-<tr><td>13</td><td>Coach</td><td>Carr</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>13</td><td>Coach</td><td>Carr</td><td>2</td><td>5</td><td>0.2</td><td>0.7</td><td>0</td><td>0</td><td>0.2</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>14</td><td>Principal</td><td>Duvall</td><td>1</td><td>6</td><td>0.5</td><td>0.2</td><td>0</td><td>0</td><td>0.2</td><td>0.2</td><td>2</td><td>0</td></tr>
-<tr><td>14</td><td>Principal</td><td>Duvall</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>15</td><td>Emma</td><td>Gerber</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>15</td><td>Emma</td><td>Gerber</td><td>2</td><td>5</td><td>0.5</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>16</td><td>Taylor</td><td>Wedell</td><td>1</td><td>6</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>17</td><td>Kristen</td><td>Hadley</td><td>1</td><td>6</td><td>0.5</td><td>0.5</td><td>0.5</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>17</td><td>Kristen</td><td>Hadley</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.5</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0.1</td></tr>
-<tr><td>18</td><td>Dawn</td><td>Schweitzer</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>18</td><td>Dawn</td><td>Schweitzer</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td><td>2</td><td>0.1</td></tr>
-<tr><td>19</td><td>Tim</td><td>Pak</td><td>1</td><td>6</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-<tr><td>19</td><td>Tim</td><td>Pak</td><td>2</td><td>5</td><td>0.2</td><td>0.5</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>20</td><td>Damian</td><td>Leigh</td><td>2</td><td>5</td><td>0.5</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr></table>
+|Player ID|First Name|Last Name|Season ID|Season AB|Season R|Season RBI|Season 1B|Season 2B|Season 3B|Season HR|Season Hits|Season Batting Average|
+|--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|0|Cady|Heron|1|7|0.7|0.7|0|0|0.2|0.5|3|0.1|
+|0|Cady|Heron|2|5|0.2|0.7|0|0|0|0.2|1|0|
+|1|Regina|George|1|7|0.5|0.7|0|0|0.2|0.2|2|0|
+|1|Regina|George|2|5|0|0|0|0|0|0|0|0|
+|2|Gretchen|Wieners|1|7|0.2|0|0.2|0.2|0|0|2|0|
+|2|Gretchen|Wieners|2|5|0.2|0.2|0|0.2|0|0.2|2|0.1|
+|3|Janis|Ian|1|7|0.5|0.2|0|0|0.2|0|1|0|
+|3|Janis|Ian|2|5|0.2|0.2|0.2|0|0|0|1|0|
+|4|Karen|Smith|1|6|0.5|0|0.5|0.5|0|0.2|5|0.2|
+|4|Karen|Smith|2|5|0.5|0.5|0.2|0.2|0|0|2|0.1|
+|5|Kevin|Gnapoor|1|6|0.2|0.5|0.5|0|0|0.2|3|0.1|
+|5|Kevin|Gnapoor|2|5|0.5|0.5|0.2|0.5|0|0|3|0.1|
+|6|Trang|Pak|1|6|0|0.7|0.2|0|0|0|1|0|
+|6|Trang|Pak|2|5|0.5|0.2|0.5|0|0.2|0|3|0.1|
+|7|Aaron|Samuels|1|6|0.2|0.5|0.2|0|0|0|1|0|
+|7|Aaron|Samuels|2|5|0.2|0|0|0|0|0.2|1|0|
+|8|Glenn|Cocoo|1|6|0|0|0|0.2|0|0|1|0|
+|8|Glenn|Cocoo|2|5|0.2|0.5|0|0.2|0.2|0|2|0.1|
+|9|Shane|Oman|1|6|0|0|0.2|0|0|0|1|0|
+|9|Shane|Oman|2|5|0.5|0.2|0.2|0|0|0.2|2|0.1|
+|10|Ms.|Norbury|1|7|0.2|0.2|0|0.2|0|0|1|0|
+|10|Ms.|Norbury|2|5|0.5|0.2|0.5|0.2|0|0|3|0.1|
+|11|Mrs.|George|1|7|0.2|0.7|0|0.2|0|0.2|2|0|
+|11|Mrs.|George|2|5|0.2|0.5|0.2|0|0.5|0|3|0.1|
+|12|Caroline|Krafft|1|6|0.2|0|0|0.2|0|0|1|0|
+|12|Caroline|Krafft|2|5|0.5|0.2|0|0.2|0.2|0|2|0.1|
+|13|Coach|Carr|1|6|0|0|0.2|0|0|0|1|0|
+|13|Coach|Carr|2|5|0.2|0.7|0|0|0.2|0.2|2|0.1|
+|14|Principal|Duvall|1|6|0.5|0.2|0|0|0.2|0.2|2|0|
+|14|Principal|Duvall|2|5|0|0|0|0|0|0|0|0|
+|15|Emma|Gerber|1|6|0|0|0|0|0|0|0|0|
+|15|Emma|Gerber|2|5|0.5|0|0|0.2|0|0|1|0|
+|16|Taylor|Wedell|1|6|0.2|0|0.2|0|0|0|1|0|
+|17|Kristen|Hadley|1|6|0.5|0.5|0.5|0|0|0|2|0|
+|17|Kristen|Hadley|2|5|0.5|0.2|0.5|0|0|0|2|0.1|
+|18|Dawn|Schweitzer|1|6|0|0|0.2|0|0|0|1|0|
+|18|Dawn|Schweitzer|2|5|0.5|0.2|0.2|0|0.2|0|2|0.1|
+|19|Tim|Pak|1|6|0.2|0.2|0|0|0|0|0|0|
+|19|Tim|Pak|2|5|0.2|0.5|0|0.2|0|0|1|0|
+|20|Damian|Leigh|2|5|0.5|0.2|0.2|0|0|0|1|0|
+
 
 #### View 2
 
@@ -331,29 +332,29 @@ FROM PLAYER_CAREER_STATS;
 
 ##### Result
 
-<table border="1" style="border-collapse:collapse">
-<tr><th>Player ID</th><th>First Name</th><th>Last Name</th><th>Career AB</th><th>Career R</th><th>Career RBI</th><th>Career 1B</th><th>Career 2B</th><th>Career 3B</th><th>Career HR</th><th>Career Hits</th><th>Career Batting Average</th></tr>
-<tr><td>13</td><td>Coach</td><td>Carr</td><td>5.5</td><td>0.1</td><td>0.3</td><td>0.1</td><td>0</td><td>0.1</td><td>0.1</td><td>1.5</td><td>0</td></tr>
-<tr><td>8</td><td>Glenn</td><td>Cocoo</td><td>5.5</td><td>0.1</td><td>0.2</td><td>0</td><td>0.2</td><td>0.1</td><td>0</td><td>1.5</td><td>0</td></tr>
-<tr><td>14</td><td>Principal</td><td>Duvall</td><td>5.5</td><td>0.2</td><td>0.1</td><td>0</td><td>0</td><td>0.1</td><td>0.1</td><td>1</td><td>0</td></tr>
-<tr><td>11</td><td>Mrs.</td><td>George</td><td>6</td><td>0.2</td><td>0.6</td><td>0.1</td><td>0.1</td><td>0.2</td><td>0.1</td><td>2.5</td><td>0.1</td></tr>
-<tr><td>1</td><td>Regina</td><td>George</td><td>6</td><td>0.2</td><td>0.3</td><td>0</td><td>0</td><td>0.1</td><td>0.1</td><td>1</td><td>0</td></tr>
-<tr><td>15</td><td>Emma</td><td>Gerber</td><td>5.5</td><td>0.2</td><td>0</td><td>0</td><td>0.1</td><td>0</td><td>0</td><td>0.5</td><td>0</td></tr>
-<tr><td>5</td><td>Kevin</td><td>Gnapoor</td><td>5.5</td><td>0.3</td><td>0.5</td><td>0.3</td><td>0.2</td><td>0</td><td>0.1</td><td>3</td><td>0.1</td></tr>
-<tr><td>17</td><td>Kristen</td><td>Hadley</td><td>5.5</td><td>0.5</td><td>0.3</td><td>0.5</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>0</td><td>Cady</td><td>Heron</td><td>6</td><td>0.5</td><td>0.7</td><td>0</td><td>0</td><td>0.1</td><td>0.3</td><td>2</td><td>0</td></tr>
-<tr><td>3</td><td>Janis</td><td>Ian</td><td>6</td><td>0.3</td><td>0.2</td><td>0.1</td><td>0</td><td>0.1</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>12</td><td>Caroline</td><td>Krafft</td><td>5.5</td><td>0.3</td><td>0.1</td><td>0</td><td>0.2</td><td>0.1</td><td>0</td><td>1.5</td><td>0</td></tr>
-<tr><td>20</td><td>Damian</td><td>Leigh</td><td>5</td><td>0.5</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>10</td><td>Ms.</td><td>Norbury</td><td>6</td><td>0.3</td><td>0.2</td><td>0.2</td><td>0.2</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>9</td><td>Shane</td><td>Oman</td><td>5.5</td><td>0.2</td><td>0.1</td><td>0.2</td><td>0</td><td>0</td><td>0.1</td><td>1.5</td><td>0</td></tr>
-<tr><td>19</td><td>Tim</td><td>Pak</td><td>5.5</td><td>0.2</td><td>0.3</td><td>0</td><td>0.1</td><td>0</td><td>0</td><td>0.5</td><td>0</td></tr>
-<tr><td>6</td><td>Trang</td><td>Pak</td><td>5.5</td><td>0.2</td><td>0.5</td><td>0.3</td><td>0</td><td>0.1</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>7</td><td>Aaron</td><td>Samuels</td><td>5.5</td><td>0.2</td><td>0.2</td><td>0.1</td><td>0</td><td>0</td><td>0.1</td><td>1</td><td>0</td></tr>
-<tr><td>18</td><td>Dawn</td><td>Schweitzer</td><td>5.5</td><td>0.2</td><td>0.1</td><td>0.2</td><td>0</td><td>0.1</td><td>0</td><td>1.5</td><td>0</td></tr>
-<tr><td>4</td><td>Karen</td><td>Smith</td><td>5.5</td><td>0.5</td><td>0.2</td><td>0.3</td><td>0.3</td><td>0</td><td>0.1</td><td>3.5</td><td>0.1</td></tr>
-<tr><td>16</td><td>Taylor</td><td>Wedell</td><td>6</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
-<tr><td>2</td><td>Gretchen</td><td>Wieners</td><td>6</td><td>0.2</td><td>0.1</td><td>0.1</td><td>0.2</td><td>0</td><td>0.1</td><td>2</td><td>0</td></tr></table>
+|Player ID|First Name|Last Name|Career AB|Career R|Career RBI|Career 1B|Career 2B|Career 3B|Career HR|Career Hits|Career Batting Average|
+|--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|13|Coach|Carr|5.5|0.1|0.3|0.1|0|0.1|0.1|1.5|0|
+|8|Glenn|Cocoo|5.5|0.1|0.2|0|0.2|0.1|0|1.5|0|
+|14|Principal|Duvall|5.5|0.2|0.1|0|0|0.1|0.1|1|0|
+|11|Mrs.|George|6|0.2|0.6|0.1|0.1|0.2|0.1|2.5|0.1|
+|1|Regina|George|6|0.2|0.3|0|0|0.1|0.1|1|0|
+|15|Emma|Gerber|5.5|0.2|0|0|0.1|0|0|0.5|0|
+|5|Kevin|Gnapoor|5.5|0.3|0.5|0.3|0.2|0|0.1|3|0.1|
+|17|Kristen|Hadley|5.5|0.5|0.3|0.5|0|0|0|2|0|
+|0|Cady|Heron|6|0.5|0.7|0|0|0.1|0.3|2|0|
+|3|Janis|Ian|6|0.3|0.2|0.1|0|0.1|0|1|0|
+|12|Caroline|Krafft|5.5|0.3|0.1|0|0.2|0.1|0|1.5|0|
+|20|Damian|Leigh|5|0.5|0.2|0.2|0|0|0|1|0|
+|10|Ms.|Norbury|6|0.3|0.2|0.2|0.2|0|0|2|0|
+|9|Shane|Oman|5.5|0.2|0.1|0.2|0|0|0.1|1.5|0|
+|19|Tim|Pak|5.5|0.2|0.3|0|0.1|0|0|0.5|0|
+|6|Trang|Pak|5.5|0.2|0.5|0.3|0|0.1|0|2|0|
+|7|Aaron|Samuels|5.5|0.2|0.2|0.1|0|0|0.1|1|0|
+|18|Dawn|Schweitzer|5.5|0.2|0.1|0.2|0|0.1|0|1.5|0|
+|4|Karen|Smith|5.5|0.5|0.2|0.3|0.3|0|0.1|3.5|0.1|
+|16|Taylor|Wedell|6|0.2|0|0.2|0|0|0|1|0|
+|2|Gretchen|Wieners|6|0.2|0.1|0.1|0.2|0|0.1|2|0|
 
 #### 5. Advanced Queries and Unix Shell Implementation
 
@@ -412,12 +413,13 @@ seasons\_join ← team\_join ⋈<sub>season\_id = id</sub> seasons
 π<sub>season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum</sub> (seasons\_join)
 
 ##### Result
-<table border="1" style="border-collapse:collapse">
-<tr><th>SEASON_ID</th><th>TEAM_ID</th><th>Team Name</th><th>Season Year</th><th>Season Type</th><th>Team Runs Per Season</th></tr>
-<tr><td>1</td><td>1</td><td>The Plastics</td><td>2015</td><td>regular</td><td>12</td></tr>
-<tr><td>1</td><td>2</td><td>The Mathletes</td><td>2015</td><td>regular</td><td>13</td></tr>
-<tr><td>2</td><td>1</td><td>The Plastics</td><td>2016</td><td>regular</td><td>13</td></tr>
-<tr><td>2</td><td>2</td><td>The Mathletes</td><td>2016</td><td>regular</td><td>14</td></tr></table>
+|SEASON_ID|TEAM_ID|Team Name|Season Year|Season Type|Team Runs Per Season|
+|--- |--- |--- |--- |--- |--- |
+|1|1|The Plastics|2015|regular|12|
+|1|2|The Mathletes|2015|regular|13|
+|2|1|The Plastics|2016|regular|13|
+|2|2|The Mathletes|2016|regular|14|
+
 
 
 #### Query 2
@@ -449,19 +451,18 @@ ORDER BY SEASON_ID, BA DESC;
 
 ##### Result
 
-<table border="1" style="border-collapse:collapse">
-<tr><th>Season Ranking</th><th>Player First Name</th><th>Player Last Name</th><th>Season ID</th><th>Season Year</th><th>Season Type</th><th>Batting Average</th></tr>
-<tr><td>1</td><td>Karen</td><td>Smith</td><td>1</td><td>2015</td><td>regular</td><td>0.208</td></tr>
-<tr><td>2</td><td>Kevin</td><td>Gnapoor</td><td>1</td><td>2015</td><td>regular</td><td>0.125</td></tr>
-<tr><td>3</td><td>Cady</td><td>Heron</td><td>1</td><td>2015</td><td>regular</td><td>0.107</td></tr>
-<tr><td>4</td><td>Principal</td><td>Duvall</td><td>1</td><td>2015</td><td>regular</td><td>0.083</td></tr>
-<tr><td>5</td><td>Kristen</td><td>Hadley</td><td>1</td><td>2015</td><td>regular</td><td>0.083</td></tr>
-<tr><td>1</td><td>Kevin</td><td>Gnapoor</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>2</td><td>Mrs.</td><td>George</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>3</td><td>Ms.</td><td>Norbury</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>4</td><td>Trang</td><td>Pak</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>5</td><td>Gretchen</td><td>Wieners</td><td>2</td><td>2016</td><td>regular</td><td>0.1</td></tr></table>
-
+|Season Ranking|Player First Name|Player Last Name|Season ID|Season Year|Season Type|Batting Average|
+|--- |--- |--- |--- |--- |--- |--- |
+|1|Karen|Smith|1|2015|regular|0.208|
+|2|Kevin|Gnapoor|1|2015|regular|0.125|
+|3|Cady|Heron|1|2015|regular|0.107|
+|4|Principal|Duvall|1|2015|regular|0.083|
+|5|Kristen|Hadley|1|2015|regular|0.083|
+|1|Kevin|Gnapoor|2|2016|regular|0.15|
+|2|Mrs.|George|2|2016|regular|0.15|
+|3|Ms.|Norbury|2|2016|regular|0.15|
+|4|Trang|Pak|2|2016|regular|0.15|
+|5|Gretchen|Wieners|2|2016|regular|0.1|
 
 
 ### 6. Normalization of Database and Functional Dependencies
@@ -517,12 +518,13 @@ seasons\_join ← team\_join ⋈<sub>season\_id = id</sub> seasons
 π<sub>season\_id, team\_id, teams.name, seasons.year, seasons.type, SUM score\_sum</sub> (seasons\_join)
 
 ##### Result
-<table border="1" style="border-collapse:collapse">
-<tr><th>SEASON_ID</th><th>TEAM_ID</th><th>Team Name</th><th>Season Year</th><th>Season Type</th><th>Team Runs Per Season</th></tr>
-<tr><td>1</td><td>1</td><td>The Plastics</td><td>2015</td><td>regular</td><td>12</td></tr>
-<tr><td>1</td><td>2</td><td>The Mathletes</td><td>2015</td><td>regular</td><td>13</td></tr>
-<tr><td>2</td><td>1</td><td>The Plastics</td><td>2016</td><td>regular</td><td>13</td></tr>
-<tr><td>2</td><td>2</td><td>The Mathletes</td><td>2016</td><td>regular</td><td>14</td></tr></table>
+|SEASON_ID|TEAM_ID|Team Name|Season Year|Season Type|Team Runs Per Season|
+|--- |--- |--- |--- |--- |--- |
+|1|1|The Plastics|2015|regular|12|
+|1|2|The Mathletes|2015|regular|13|
+|2|1|The Plastics|2016|regular|13|
+|2|2|The Mathletes|2016|regular|14|
+
 
 
 #### Query 2
@@ -562,18 +564,18 @@ condition ← σ <sub> ROW\_NUMBER() OVER (PARTITION BY season\_id) ≤ 5 </sub>
 
 ##### Result
 
-<table border="1" style="border-collapse:collapse">
-<tr><th>Season Ranking</th><th>Player First Name</th><th>Player Last Name</th><th>Season ID</th><th>Season Year</th><th>Season Type</th><th>Batting Average</th></tr>
-<tr><td>1</td><td>Karen</td><td>Smith</td><td>1</td><td>2015</td><td>regular</td><td>0.208</td></tr>
-<tr><td>2</td><td>Kevin</td><td>Gnapoor</td><td>1</td><td>2015</td><td>regular</td><td>0.125</td></tr>
-<tr><td>3</td><td>Cady</td><td>Heron</td><td>1</td><td>2015</td><td>regular</td><td>0.107</td></tr>
-<tr><td>4</td><td>Principal</td><td>Duvall</td><td>1</td><td>2015</td><td>regular</td><td>0.083</td></tr>
-<tr><td>5</td><td>Kristen</td><td>Hadley</td><td>1</td><td>2015</td><td>regular</td><td>0.083</td></tr>
-<tr><td>1</td><td>Kevin</td><td>Gnapoor</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>2</td><td>Mrs.</td><td>George</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>3</td><td>Ms.</td><td>Norbury</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>4</td><td>Trang</td><td>Pak</td><td>2</td><td>2016</td><td>regular</td><td>0.15</td></tr>
-<tr><td>5</td><td>Gretchen</td><td>Wieners</td><td>2</td><td>2016</td><td>regular</td><td>0.1</td></tr></table>
+|Season Ranking|Player First Name|Player Last Name|Season ID|Season Year|Season Type|Batting Average|
+|--- |--- |--- |--- |--- |--- |--- |
+|1|Karen|Smith|1|2015|regular|0.208|
+|2|Kevin|Gnapoor|1|2015|regular|0.125|
+|3|Cady|Heron|1|2015|regular|0.107|
+|4|Principal|Duvall|1|2015|regular|0.083|
+|5|Kristen|Hadley|1|2015|regular|0.083|
+|1|Kevin|Gnapoor|2|2016|regular|0.15|
+|2|Mrs.|George|2|2016|regular|0.15|
+|3|Ms.|Norbury|2|2016|regular|0.15|
+|4|Trang|Pak|2|2016|regular|0.15|
+|5|Gretchen|Wieners|2|2016|regular|0.1|
 
 
 
@@ -627,30 +629,29 @@ join2 ← players ⋈ <sub>players.id = player\_id</sub> (subselect)
 
 Given the values `16-10-03` and `16-10-13` for the bind variables `:sd` and `:ed`, the following result is produced:
 
-<body>
-<table border="1" style="border-collapse:collapse">
-<tr><th>FIRST NAME</th><th>LAST NAME</th><th>BA</th><th>GAMES PLAYED</th><th>AVG POINTS PER GAME</th></tr>
-<tr><td>Kevin</td><td>Gnapoor</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>Trang</td><td>Pak</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>Ms.</td><td>Norbury</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>Shane</td><td>Oman</td><td>0.2</td><td>2</td><td>0.1</td></tr>
-<tr><td>Janis</td><td>Ian</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Coach</td><td>Carr</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Gretchen</td><td>Wieners</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Cady</td><td>Heron</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Karen</td><td>Smith</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Mrs.</td><td>George</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Emma</td><td>Gerber</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Kristen</td><td>Hadley</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Glenn</td><td>Cocoo</td><td>0.1</td><td>2</td><td>0.05</td></tr>
-<tr><td>Tim</td><td>Pak</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Dawn</td><td>Schweitzer</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Principal</td><td>Duvall</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Caroline</td><td>Krafft</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Aaron</td><td>Samuels</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Damian</td><td>Leigh</td><td>0</td><td>2</td><td>0</td></tr>
-<tr><td>Regina</td><td>George</td><td>0</td><td>2</td><td>0</td></tr></table>
-</body>
+|FIRST NAME|LAST NAME|BA|GAMES PLAYED|AVG POINTS PER GAME|
+|--- |--- |--- |--- |--- |
+|Kevin|Gnapoor|0.2|2|0.1|
+|Trang|Pak|0.2|2|0.1|
+|Ms.|Norbury|0.2|2|0.1|
+|Shane|Oman|0.2|2|0.1|
+|Janis|Ian|0.1|2|0.05|
+|Coach|Carr|0.1|2|0.05|
+|Gretchen|Wieners|0.1|2|0.05|
+|Cady|Heron|0.1|2|0.05|
+|Karen|Smith|0.1|2|0.05|
+|Mrs.|George|0.1|2|0.05|
+|Emma|Gerber|0.1|2|0.05|
+|Kristen|Hadley|0.1|2|0.05|
+|Glenn|Cocoo|0.1|2|0.05|
+|Tim|Pak|0|2|0|
+|Dawn|Schweitzer|0|2|0|
+|Principal|Duvall|0|2|0|
+|Caroline|Krafft|0|2|0|
+|Aaron|Samuels|0|2|0|
+|Damian|Leigh|0|2|0|
+|Regina|George|0|2|0|
+
 
 
 #### Query 4
@@ -709,18 +710,16 @@ inner2 ← π <sub>game\_id, season\_id, home\_team\_id, visitor\_team\_id, home
 
 
 ##### Result
+|GAME_ID|SEASON_ID|HOME_TEAM_ID|VISITOR_TEAM_ID|HOME_SCORE|VISITOR_SCORE|WINNING_TEAM_ID|WINNING_TEAM_NAME|
+|--- |--- |--- |--- |--- |--- |--- |--- |
+|1|1|1|2|5|2|1|The Plastics|
+|2|1|1|2|3|6|2|The Mathletes|
+|4|1|2|1|3|2|2|The Mathletes|
+|5|2|1|2|8|2|1|The Plastics|
+|6|2|1|2|2|3|2|The Mathletes|
+|7|2|1|2|2|4|2|The Mathletes|
+|8|2|1|2|1|5|2|The Mathletes|
 
-<body>
-<table border="1" style="border-collapse:collapse">
-<tr><th>GAME_ID</th><th>SEASON_ID</th><th>HOME_TEAM_ID</th><th>VISITOR_TEAM_ID</th><th>HOME_SCORE</th><th>VISITOR_SCORE</th><th>WINNING_TEAM_ID</th><th>WINNING_TEAM_NAME</th></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>2</td><td>5</td><td>2</td><td>1</td><td>The Plastics</td></tr>
-<tr><td>2</td><td>1</td><td>1</td><td>2</td><td>3</td><td>6</td><td>2</td><td>The Mathletes</td></tr>
-<tr><td>4</td><td>1</td><td>2</td><td>1</td><td>3</td><td>2</td><td>2</td><td>The Mathletes</td></tr>
-<tr><td>5</td><td>2</td><td>1</td><td>2</td><td>8</td><td>2</td><td>1</td><td>The Plastics</td></tr>
-<tr><td>6</td><td>2</td><td>1</td><td>2</td><td>2</td><td>3</td><td>2</td><td>The Mathletes</td></tr>
-<tr><td>7</td><td>2</td><td>1</td><td>2</td><td>2</td><td>4</td><td>2</td><td>The Mathletes</td></tr>
-<tr><td>8</td><td>2</td><td>1</td><td>2</td><td>1</td><td>5</td><td>2</td><td>The Mathletes</td></tr></table>
-</body>
 
 
 #### Query 5
@@ -775,14 +774,13 @@ inner2 ← π <sub>game\_id, season\_id, home\_team\_id, visitor\_team\_id, home
 
 ##### Result
 
-<body>
-<table border="1" style="border-collapse:collapse">
-<tr><th>ID</th><th>NAME</th><th>SEASON_ID</th><th>WINS</th></tr>
-<tr><td>1</td><td>The Plastics</td><td>1</td><td>1</td></tr>
-<tr><td>2</td><td>The Mathletes</td><td>1</td><td>2</td></tr>
-<tr><td>1</td><td>The Plastics</td><td>2</td><td>1</td></tr>
-<tr><td>2</td><td>The Mathletes</td><td>2</td><td>3</td></tr></table>
-</body>
+|ID|NAME|SEASON_ID|WINS|
+|--- |--- |--- |--- |
+|1|The Plastics|1|1|
+|2|The Mathletes|1|2|
+|1|The Plastics|2|1|
+|2|The Mathletes|2|3|
+
 
 #### Functional Dependencies
 ##### TEAMS
