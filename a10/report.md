@@ -16,7 +16,7 @@ This application would allow users to be able to create teams and players to org
 
 ### 2. ER Model
 
-The initial ER model is displayed below:
+The initial ER model is displayed below.
 
 ![ER diagram](images/er.png)
 
@@ -25,7 +25,7 @@ This ER diagram covered majority of the database design, but additional informat
 
 ### 3. Schema Design
 
-The EER model is displayed below:
+The EER model is displayed on the next page:
 
 ![EER diagram](images/eer.png)
 
